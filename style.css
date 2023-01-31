@@ -231,6 +231,25 @@ form .buttons button , .backBtn{
   .rad-input:checked~.rad-text {
     color: hsl(0, 0%, 40%);
   }
+
+  
+  .sub-ms{
+    position:absolute;
+    top: 20%;
+    color: #1c614e;
+   }
+
+   textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #1c614e;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
   
 
 @media (max-width: 750px) {
