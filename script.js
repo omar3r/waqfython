@@ -19,8 +19,7 @@ nextBtn.addEventListener("click", ()=> {
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
-
-
+nextBtn.addEventListener( "click", () => document.getElementById('43').scrollIntoView()) ;
 
 
 
