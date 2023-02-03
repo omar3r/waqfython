@@ -252,13 +252,12 @@ form .buttons button , .backBtn{
   }
 
   .box {
+   
     position:absolute;
     top: 0;
-    width: 60%;
+    width: 80%;
     height: 100px;
    
-    border: 5px solid white;
-    border-radius: 2%;
   }
   img {
     width: 100%; 
