@@ -235,8 +235,9 @@ form .buttons button , .backBtn{
   
   .sub-ms{
     position:absolute;
-    top: 30%;
-    color: #1c614e;
+   top: 40%;
+   color: black;
+   font-weight: 400;
    }
 
    textarea {
@@ -254,8 +255,8 @@ form .buttons button , .backBtn{
   .box {
    
     position:absolute;
-    top: 0;
-    width: 80%;
+    top: 5%;
+    width: 400px;
     height: 100px;
    
   }
