@@ -269,9 +269,10 @@ form .buttons button , .backBtn{
     position:absolute;
     bottom: 0;
     width: 100%;
-    height: 13%;
+    height: 15%;
     text-align: center;
     background-color: #fff;
+    padding: 2%;
 
     
   }
