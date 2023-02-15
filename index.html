@@ -14,20 +14,40 @@
 
     <title>وقفيثـون </title>
 </head>
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>وقفثيـون </title>
+</head>
 <body>
     <div class="container">
-        <header>وقفيثـــون</header>
+        <header>وقفثيـــون</header>
         <script type ="text/javascript">var Submetted=false</script> 
         <iframe name="hiddenConfirme" id="hiddenConfirme" style="display: none; " onload="if(Submetted){window.location='submitted.html' ;}"></iframe>
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe63wVEKJjkHx05ffwsz4RXgZ9mNhKxj0WxRL2Adyq7hanvBA/formResponse" method="post" target="hiddenConfirme" onsubmit="Submetted=true">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe63wVEKJjkHx05ffwsz4RXgZ9mNhKxj0WxRL2Adyq7hanvBA/formResponse" name="myForm" method="post" target="hiddenConfirme" onsubmit="event.preventDefault(); validateMyForm();">
             <div class="form first">
                 <div class="details personal">
-                    <span class="title" id="43">المعلومات الشخصية</span>
+                    <span class="title">المعلومات الشخصية</span>
 
-                    <div class="fields">
+                    <div class="fields" id="43">
                         <div class="input-field">
-                            <label>الإسم الثلاثي</label>
-                            <input type="text " name="entry.1729054101" placeholder="اكتب اسمك هنا" >
+                            <label>الإسم الثلاثي<label class="must">*</label></label>
+                            
+                           
+                            <input type="text " id="username" name="entry.1729054101" placeholder="اكتب اسمك هنا" required>
+                            <div class="error"></div>
+
                         </div>
 
                         <div class="input-field">
@@ -41,21 +61,28 @@
                       </div>
 
                       <div class="input-field">
-                        <label>عنوان البريد الإلكتروني</label>
-                        <input type="text " name="entry.241806867" placeholder="ايميلك هنا" >
+                        <label>عنوان البريد الإلكتروني <label class="must">*</label></label>
+                        
+                        
+                        <input type="text " id="email" name="entry.241806867" placeholder="ايميلك هنا" required>
+                        <div class="error"></div>
                     </div>
                     
 
                       
 
                       <div class="input-field">
-                          <label>رقم الجوال</label>
-                          <input type="number"  name= "entry.1635467834" placeholder="ادخل رقم جوالك" >
+                          <label>رقم الجوال <label class="must">*</label></label>
+                         
+                          <input type="text" id="phoneNumber1" name= "entry.1635467834" placeholder="05xxxxxxxx" >
+                          <div class="error"></div>
                       </div>
                       <div class="input-field boo"></div>
 
                         <div class="input-field boo">
-                            <label>المؤهل العلمي</label>
+                            <label id="edu1">المؤهل العلمي<label class="must">*</label></label>
+                            <div class="error"></div>
+                            
 
                             <label class="rad-label">
                                 <input type="radio" class="rad-input" name="entry.682338275" value="ثانوية عامه">
@@ -146,13 +173,6 @@
                                 <div class="rad-design"></div>
                                 <div class="rad-text">ريادة الأعمال</div>
                               </label>
-
-                              <label class="rad-label">
-                                <input type="radio" class="rad-input" name="entry.1229323280" value="التقنيات الناشئة">
-                                <div class="rad-design"></div>
-                                <div class="rad-text">التقنيات الناشئة</div>
-                              </label>
-                           
                            
                         </div>
                         
@@ -169,12 +189,19 @@
                        
                     </div>
                     
-                    <button class="nextBtn" type="button" >
+                    
+                   
+                    
+                      <button class="nextBtn" type="button"  href="#43">
                       <span class="btnText">التالي</span>
                       <i class="uil uil-navigator"></i>
+                      
                     
-                    </button>
+                    
+                    
                 </div>
+
+                
 
             </div>
 
@@ -189,8 +216,9 @@
                     <div class="fields">
                         <div class="input-field boo">
                            
-
-                            <label> حدد المسار الذي تتبع له  فكرتك :</label>
+                          
+                            <label id="path2"> حدد المسار الذي تتبع له  فكرتك :<label class="must">*</label></label>
+                            <div class="error"></div>
                                 <label class="rad-label">
                                     <input type="radio" class="rad-input" name="entry.1301797980" value="خدمات الفئات الأشد حاجة" >
                                     <div class="rad-design"></div>
@@ -249,6 +277,7 @@
                         </div>
 
                         <div class="input-field boo ">
+                          
                            
 
                             <label>هل يساهم الحل بعائد مادي للمسار المحدد ؟</label>
@@ -312,9 +341,11 @@
                         </div>
 
                         <div class="input-field">
-                            <label>اكتب شرح مختصر عن فكرتك بما لا يتجاوز 200 كلمة</label>
-                            <textarea name="entry.1240661066" rows="5" cols="10" wrap="soft"> </textarea>
+                            <label>اكتب شرح مختصر عن فكرتك بما لا يتجاوز 200 كلمة <label class="must">*</label></label>
+                            <textarea name="entry.1240661066" id="textforidea" rows="5" cols="10" wrap="soft" > </textarea>
+                            <div class="error"></div>
                         </div>
+                        
 
                        
                     </div>
@@ -329,7 +360,7 @@
                             <span class="btnText">الرجوع</span>
                         </div>
                         
-                        <button class="sumbit">
+                        <button type="submit" class="submit" id="sub">
                             <span class="btnText">إرسال</span>
                             <i class="uil uil-navigator"></i>
                         </button>

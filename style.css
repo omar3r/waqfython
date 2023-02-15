@@ -299,3 +299,30 @@ form .buttons button , .backBtn{
 
 
 
+
+
+.input-field input:focus {
+    outline: 0;
+}
+
+.input-field.success input {
+    border-color: #09c372;
+}
+
+.input-field.error input {
+    border-color: #b82525;
+}
+
+.input-field .error {
+    color: #b82525;
+    font-size: 14px;
+    height: 13px;
+}
+
+label .must{
+    
+    font-weight: 700;
+    color: #b82525;
+   
+}
+
