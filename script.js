@@ -51,17 +51,25 @@ function validateradio2(m , valid) {
     
     
 
-    if (!(radio[0].checked || radio[1].checked || radio[2].checked || radio[3].checked ) ) {
-
-        valid = false;
-
-    } else{ valid = true}
+    var i = 0;
+    while (!valid && i < radio.length) {
+        if (radio[i].checked) valid = true;
+       
+        i++;        
+    }
 
 
     
     return valid;
-}
 
+
+   
+    
+
+  
+
+  
+}
 
 function validateMyForm()
 {
